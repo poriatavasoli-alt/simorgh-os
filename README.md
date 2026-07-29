@@ -6,7 +6,7 @@
 
 فایل اصلی را در مرورگر باز کنید:
 
-- [`index.html`](./index.html) (همان Simorgh OS 11)
+- [`index.html`](./index.html) (لودر + payload فشرده)
 
 حساب پیش‌فرض:
 
@@ -17,9 +17,10 @@
 
 ## PWA
 
-برای حالت Progressive Web App، این فایل‌ها را کنار هم نگه دارید:
+برای حالت Progressive Web App این فایل‌ها را کنار هم نگه دارید:
 
 - `index.html`
+- `payload0.js` / `payload1.js`
 - `manifest.json`
 - `sw.js`
 
@@ -27,8 +28,9 @@
 
 - Kernel Engine (Process / Memory / Services)
 - AI Core · Secure Shield · Theme Studio
-- File System · Terminal · Multi-Window Desktop
+- File System · Terminal Pro · Multi-Window Desktop
 - Virtual Desktops: Work · Gaming · AI Lab
+- طراحی مکعبی (Cubic) + گلاسمورفیسم کوانتومی
 
 ## مجوز
 

@@ -1,14 +1,15 @@
-/* Simorgh OS 11 — Service Worker (offline shell) */
-const CACHE = 'simorgh-os-11-v1';
+/* Simorgh OS 11.0 Quantum — Service Worker */
+const CACHE = 'simorgh-os-11-quantum-v1';
 const ASSETS = [
   './index.html',
-  './manifest.json'
+  './manifest.json',
+  './payload0.js',
+  './payload1.js',
+  './sw.js'
 ];
 
 self.addEventListener('install', (e) => {
-  e.waitUntil(
-    caches.open(CACHE).then((c) => c.addAll(ASSETS).catch(() => {})).then(() => self.skipWaiting())
-  );
+  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (e) => {
@@ -20,19 +21,7 @@ self.addEventListener('activate', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
-  if (e.request.method !== 'GET') return;
   e.respondWith(
-    caches.match(e.request).then((cached) => {
-      const fetchPromise = fetch(e.request)
-        .then((res) => {
-          try {
-            const clone = res.clone();
-            caches.open(CACHE).then((c) => c.put(e.request, clone)).catch(() => {});
-          } catch (_) {}
-          return res;
-        })
-        .catch(() => cached);
-      return cached || fetchPromise;
-    })
+    caches.match(e.request).then((r) => r || fetch(e.request).catch(() => caches.match('./index.html')))
   );
 });
