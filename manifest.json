@@ -1,0 +1,31 @@
+{
+  "name": "Simorgh OS 11.0 Quantum Edition",
+  "short_name": "Simorgh OS",
+  "description": "Professional Web Operating System \u2014 Simorgh Kernel Engine",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0B0B0B",
+  "theme_color": "#D4AF37",
+  "lang": "fa",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect fill='%230B0B0B' width='512' height='512'/%3E%3Ctext x='256' y='320' text-anchor='middle' font-size='280'%3E%F0%9F%A6%85%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Terminal",
+      "url": "./index.html#terminal"
+    },
+    {
+      "name": "Simorgh AI",
+      "url": "./index.html#ai"
+    }
+  ]
+}
