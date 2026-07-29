@@ -1,33 +1,17 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" data-quantum="true">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Simorgh OS 11.0 Quantum Edition">
-<meta name="theme-color" content="#D4AF37">
-<title>Simorgh OS 11.0 Quantum Edition</title>
-<link rel="manifest" href="./manifest.json">
-<script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simorgh OS 11.0 Quantum Edition — سیستم‌عامل تحت وب کوانتومی با هسته سیمرغ، هوش مصنوعی، امنیت پیشرفته و طراحی لوکس سایبر">
+    <meta name="theme-color" content="#D4AF37">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Simorgh OS 11.0 Quantum Edition</title>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦅</text></svg>">
+    <!-- PLACEHOLDER: full content will be injected via edit if needed -->
 </head>
-<body style="margin:0;background:#050508;color:#D4AF37;font-family:Vazirmatn,Tahoma,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;flex-direction:column;gap:12px">
-<div style="font-size:48px">🦅</div>
-<p id="s" style="opacity:0.9">در حال بارگذاری Simorgh OS 11 Quantum…</p>
-<script src="payload0.js"></script>
-<script src="payload1.js"></script>
-<script>
-(async function () {
-  try {
-    if (typeof pako === "undefined") throw new Error("pako load failed (نیاز به اینترنت برای اولین بار)");
-    if (!window.SIMORGH_PAYLOAD) throw new Error("payload missing");
-    const bin = Uint8Array.from(atob(window.SIMORGH_PAYLOAD), function(c){ return c.charCodeAt(0); });
-    const text = pako.ungzip(bin, { to: "string" });
-    document.open();
-    document.write(text);
-    document.close();
-  } catch (e) {
-    document.getElementById("s").textContent = "خطا در بارگذاری: " + e.message;
-  }
-})();
-</script>
-</body>
+<body>Loading full OS...</body>
 </html>
