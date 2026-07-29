@@ -1,1 +1,32 @@
-PLACEHOLDER_WILL_FAIL
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Simorgh OS 11.0 Quantum Edition">
+<meta name="theme-color" content="#D4AF37">
+<title>Simorgh OS 11.0 Quantum Edition</title>
+<link rel="manifest" href="./manifest.json">
+<script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+</head>
+<body style="margin:0;background:#050508;color:#D4AF37;font-family:Vazirmatn,Tahoma,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;flex-direction:column;gap:12px">
+<div style="font-size:48px">🦅</div>
+<p id="s" style="opacity:0.9">در حال بارگذاری Simorgh OS 11 Quantum…</p>
+<script src="payload.js"></script>
+<script>
+(async function () {
+  try {
+    if (typeof pako === "undefined") throw new Error("pako load failed (نیاز به اینترنت برای اولین بار)");
+    if (!window.SIMORGH_PAYLOAD) throw new Error("payload missing");
+    const bin = Uint8Array.from(atob(window.SIMORGH_PAYLOAD), function(c){ return c.charCodeAt(0); });
+    const text = pako.ungzip(bin, { to: "string" });
+    document.open();
+    document.write(text);
+    document.close();
+  } catch (e) {
+    document.getElementById("s").textContent = "خطا در بارگذاری: " + e.message;
+  }
+})();
+</script>
+</body>
+</html>
