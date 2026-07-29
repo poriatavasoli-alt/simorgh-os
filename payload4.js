@@ -1,0 +1,1 @@
+window.SIMORGH_PAYLOAD = (window.SIMORGH_PAYLOAD || "") + "nvEw6Y1YukE2WaJeWxxFaTLSOc3Z8h+alBweRd1lUc2wKWx4/rvKCkiYRYknCThSpfEQ69AqxSu+kXjZpahhcrzwGu4BCkPhGyLGS4H4qIyuBLp684ZgYJwcOong1o+V6My0Ie59hQXYpTnoeHswvnzq0hxeMeF/t8fdzuVT/wYUNiJbaRAFAA==";
