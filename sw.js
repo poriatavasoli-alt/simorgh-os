@@ -5,6 +5,8 @@ const ASSETS = [
   './manifest.json',
   './payload0.js',
   './payload1.js',
+  './payload2.js',
+  './payload3.js',
   './sw.js'
 ];
 
